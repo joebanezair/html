@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password change failed!</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+        }
+        #congrats{
+            display: grid;
+            grid-template-columns: auto auto;
+        } 
+        #right{
+            padding-left: 20px;
+        }
+        #container {
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh;
+            width: fit-content;
+            margin: auto;
+        }
+        #title{
+            color: #001d1d;
+        }
+        #body {
+            padding: 20px;
+            width: fit-content;
+            border: 1px solid gainsboro;
+            border-radius: 10px;
+        }
+        #login_back{
+            border-radius: 50px;
+            background-color: aquamarine;
+            color: #001d1d;
+            font-size: 15px;
+            padding: 7px;
+            cursor: pointer;
+            padding-right: 10px;
+            padding-left: 10px;
+            border: none;
+        }
+        #font-icon{
+            background-image: url('./neutral.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 250px;
+            width: 250px;
+            border-radius: 20px;
+            background-position: center;
+            border: 1px solid gainsboro;
+        }
+        #datetime{
+            margin-top: 4px;
+            color: gray;
+        }
+
+        @media screen and (max-width: 700px) {
+            #congrats {
+                display: grid;
+                grid-template-columns: auto;
+                margin: 0px;
+            }
+            #right{
+                padding-left: 0px;
+            }
+            #body {
+                padding: 20px;
+                width: fit-content;
+                border: none;
+                border-radius: 10px;
+            }
+
+            #font-icon{
+                background-image: url('./neutral.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                height: 250px;
+                width: 250px;
+                border-radius: 20px;
+                background-position: center;
+                border: 1px solid gainsboro;
+                margin: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+ <div id="body">
+  <div id="congrats">
+    <div id="font-icon"></div>
+    <div id="right">
+      <h1 id="title">Password Reset Failed 😞!</h1>
+      <h3>Sorry, we couldn't reset your password.<br/> Please try again later.</h3>
+      <label style="color: gray;">If you didn't initiate this change, please contact our support immediately.</label>
+      <h5 id="datetime"></h5>
+    </div>
+  </div>
+  <script>
+    var now = new Date();
+    var dateTimeString = now.toLocaleString();
+    document.getElementById('datetime').innerText = "Date: " + dateTimeString;
+  </script>
+ </div>
+</div>
+</body>
+</html>
