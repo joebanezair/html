@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resetting Password GoPlay360</title>
+    <link rel="stylesheet" type="text/css" href="./harry_html.css" />    
+</head>
+<body>
+<div id="container">
+ <div id="body">
+  <div id="congrats">
+    <div id="font-icon"></div>
+    <div id="right">
+      <h1 id="title">Loading...</h1>
+      <div id="announcement">Loading...</div>
+      <div id="announcement2" style="margin-top: 10px;">This link is only valid for two hours.</div>
+      <div id="announcement2">Click this <span style="font-weight: bold;">Button</span> reset your password.</div>
+       <div id="h4h21" onclick="window.open('https://example.com', '_blank')">
+        Click here...
+       </div>
+      <label style="color: black; text-transform:capitalize; margin-top: 10px; font-size: 25px">thanks!</label>
+      <h5 id="datetime"></h5>
+    </div>
+  </div>
+ </div>
+</div>
+<script>
+    var now = new Date();
+    var dateTimeString = now.toLocaleString();
+    document.getElementById('datetime').innerText = "Date: " + dateTimeString;
+    const values = {
+        "page_title":"Resetting Account Password for GoPlay360",
+        "header_title":"Resetting Account Password for \nGoPlay360",
+        "announcement":"Someone has requested a password reset for your game account. \nPlease delete this email if it was not you.",
+        "link":"https://www.canva.com/design/DAF8Fvw1eKE/QMkNNXb8bYALz7LqAyiUUg/edit",
+    }
+    document.getElementById("title").innerText = values.header_title;
+    document.getElementById("announcement").innerHTML = values.announcement;
+     
+</script>
+</body>
+</html>

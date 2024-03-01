@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password change success!</title>
+    <link rel="stylesheet" type="text/css" href="./harry_html.css" />    
+</head>
+<body>
+<div id="container">
+ <div id="body">
+  <div id="congrats">
+    <div id="font-icon"></div>
+    <div id="right">
+      <h1 id="title">Loading...</h1>
+      <div id="announcement">Loading...</div>
+      <h1 id="h4h">Email : <a style="color: blue;">kevinanew@gmail.com</a></h1>
+      <h1 id="h5h">Password : v6h0x0</h1>
+      <label style="color: gray;">If you didn't initiate this change, please contact our support immediately.</label>
+      <h5 id="datetime"></h5>
+    </div>
+  </div>
+ </div>
+</div>
+<script>
+    var now = new Date();
+    var dateTimeString = now.toLocaleString();
+    document.getElementById('datetime').innerText = "Date: " + dateTimeString;
+    const values = {
+        "page_title":"Password change success!",
+        "header_title":"Password for your GoPlay360 \naccount has been change 😊",
+        "announcement":"Your GoPlay360 account password has been change",
+        "email":"Email :",
+        "owner":"kevinanew@gmail.com",
+        "password":"Password : v680x0"
+    }
+    document.getElementById("title").innerText = values.header_title;
+    document.getElementById("announcement").innerHTML = values.announcement;
+    document.getElementById("email").innerHTML = values.email;
+    document.title = values.page_title;
+    document.getElementById("owner").innerHTML = values.owner;
+    document.getElementById("h5h").innerText = values.password;
+</script>
+</body>
+</html>
